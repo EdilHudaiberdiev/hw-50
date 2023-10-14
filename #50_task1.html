@@ -10,13 +10,59 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <title>Document</title>
     <style>
+        body {
+            background: #e8e8e8;
+        }
+
+        .container {
+            text-align: center;
+
+        }
+
+        #app {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+        }
+
+        .film-collection {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            text-align: left;
+        }
+
+        .film-card{
+            border: 2px solid #939393;
+            border-radius: 2%;
+            background: #fcfcfc;
+            padding: 20px 20px 30px 20px;
+            margin: 12px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 2px #ccc;
+        }
+
+        .film-card > img {
+            height: auto;
+            width: 280px;
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+        .film-card > p {
+            margin: 4px 0 5px 10px;
+        }
+
     </style>
 </head>
 <body>
 
-
-<h1>My top 3 films</h1>
-<div id="app"></div>
+<div class="container">
+    <h1>My top 3 films</h1>
+    <div id="app"></div>
+</div>
 
 <script type="text/babel">
     const Film = ({name, date, budget, actors, poster}) => {
@@ -34,7 +80,7 @@
 
     const filmCollection = (
         <div className="film-collection">
-            <Film name={'The Shawshank Redemption'} date={'September 10, 1994'} budget={'$25 million'} actors={'Morgan Freeman, Tim Robbins'} poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4-Hay-Kv9FNpZNlGqW2BzwQVyCqrjbES5iQ&usqp=CAU"/>
+            <Film name={'The Shawshank Redemption'} date={'September 10, 1994'} budget={'$25 million'} actors={'Morgan Freeman, Tim Robbins'} poster="https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg"/>
             <Film name={'The Departed'} date={'September 26, 2006'} budget={'$90 million'} actors={'Leonardo DiCaprio, Matt Damon'} poster="https://upload.wikimedia.org/wikipedia/en/5/50/Departed234.jpg"/>
             <Film name={'The Dark Knight'} date={'July 14, 2008'} budget={'$185 million'} actors={'Christian Bale'} poster="https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg"/>
         </div>
