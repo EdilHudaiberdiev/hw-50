@@ -1,0 +1,41 @@
+
+.container {
+    text-align: center;
+
+}
+
+#app {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.film-collection {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: left;
+}
+
+.film-card{
+    border: 2px solid #939393;
+    border-radius: 2%;
+    background: #ececec;
+    padding: 20px 20px 30px 20px;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 2px #ccc;
+}
+
+.film-card > img {
+    height: auto;
+    width: 280px;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.film-card > p {
+    margin: 4px 0 5px 10px;
+}

@@ -9,6 +9,7 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="task2_style.css">
 </head>
 <body>
 
@@ -19,7 +20,7 @@
     const Navbar = () => {
         return (
                 <nav>
-                    <ul>
+                    <ul className="navList">
                         <li><a href="#">Главная</a></li>
                         <li><a href="#">О нас</a></li>
                         <li><a href="#">Контакты</a></li>
@@ -30,7 +31,7 @@
 
     const Article = () => {
         return (
-            <div>
+            <div className="Article">
                 <h1>What is Lorem Ipsum?</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
@@ -51,7 +52,7 @@
 
     const Cards = ({text}) => {
         return (
-            <div>
+            <div className="card">
                 <h3>Any title</h3>
                 <p>Any text: {text}</p>
                 <p>Any text: {text}</p>
@@ -61,7 +62,7 @@
 
     const CardsContainer = () => {
         return (
-            <div>
+            <div className="cardsContainer">
                 <Cards text="Lorem Ipsum" />
                 <Cards text="Lorem Ipsum" />
                 <Cards text="Lorem Ipsum" />
@@ -71,7 +72,7 @@
 
     const Footer = ({phone, email}) => {
         return (
-            <div>
+            <div className="footer">
                 <div className="footer-left">
                     <a href="#">Contacts: {phone}</a>
                     <a href="#">Contacts: {email}</a>
@@ -87,7 +88,7 @@
     };
 
     const Content = (
-        <div>
+        <div className="content">
             <Navbar />
             <Article />
             <CardsContainer />
