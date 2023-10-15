@@ -6,8 +6,99 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
+
+<div id="app"></div>
+
+<script type="text/babel">
+
+    const Navbar = () => {
+        return (
+                <nav>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+        );
+    };
+
+    const Article = () => {
+        return (
+            <div>
+                <h1>What is Lorem Ipsum?</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                    the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                    the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        );
+    };
+
+    const Cards = ({text}) => {
+        return (
+            <div>
+                <h3>Any title</h3>
+                <p>Any text: {text}</p>
+                <p>Any text: {text}</p>
+            </div>
+        );
+    };
+
+    const CardsContainer = () => {
+        return (
+            <div>
+                <Cards text="Lorem Ipsum" />
+                <Cards text="Lorem Ipsum" />
+                <Cards text="Lorem Ipsum" />
+            </div>
+        );
+    };
+
+    const Footer = ({phone, email}) => {
+        return (
+            <div>
+                <div className="footer-left">
+                    <a href="#">Contacts: {phone}</a>
+                    <a href="#">Contacts: {email}</a>
+                </div>
+
+                <div className="footer-right">
+                    <a href="#">socials</a>
+                    <a href="#">socials</a>
+                    <a href="#">socials</a>
+                </div>
+            </div>
+        );
+    };
+
+    const Content = (
+        <div>
+            <Navbar />
+            <Article />
+            <CardsContainer />
+            <Footer phone={"996 550 522 913"} email={"edil.31@mail.ru"}/>
+        </div>
+    );
+
+    const container = document.getElementById('app');
+    ReactDOM.createRoot(container).render(Content) ;
+
+</script>
 
 </body>
 </html>
